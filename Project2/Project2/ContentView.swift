@@ -220,7 +220,7 @@ struct ContentView: View {
         }
     }
 
-    //case and punctuation check
+    //case and punctuation checkFrom 
     func normalize(_ text: String) -> String {
         let lower = text.lowercased()
         let filtered = lower.filter { $0.isLetter || $0.isNumber || $0.isWhitespace }
