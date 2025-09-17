@@ -275,8 +275,8 @@ struct Track: Identifiable, Hashable {
 }
 
 struct SongsView: View {
-    @State private var selected: [Track] = []
-    @State private var query = ""
+    @State var selected: [Track] = []
+    @State var query = ""
 
     let catalog: [Track] = [
         Track(title: "Fly Me to the Moon", artist: "Frank Sinatra"),
@@ -663,7 +663,7 @@ struct VibeChip: View {
 
 //Archetype
 struct ArchetypeFlowRoot: View {
-    @State private var showReveal = false
+    @State var showReveal = false
 
     var body: some View {
         ZStack {   // CHANGED: Removed inner NavigationStack
@@ -683,7 +683,7 @@ struct ArchetypeFlowRoot: View {
 
 struct ArchetypeLoadingView: View {
     var onFinish: () -> Void
-    @State private var dotCount = 0
+    @State var dotCount = 0
 
     var body: some View {
         ZStack {
@@ -767,8 +767,8 @@ struct LoopingVideo: View {
     let ext: String = "mp4"
     let size: CGFloat
 
-    @State private var player: AVQueuePlayer?
-    @State private var looper: AVPlayerLooper?
+    @State var player: AVQueuePlayer?
+    @State var looper: AVPlayerLooper?
 
     var body: some View {
         VideoPlayer(player: player)
